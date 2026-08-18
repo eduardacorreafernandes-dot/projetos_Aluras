@@ -1,8 +1,10 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Blog da Escola Conectar</title>
 
     <style>
@@ -19,6 +21,14 @@
             color: white;
             padding: 20px;
             text-align: center;
+        }
+
+        header h1 {
+            margin: 0 0 10px;
+        }
+
+        header p {
+            margin: 0;
         }
 
         nav {
@@ -48,10 +58,10 @@
         }
 
         main {
-            background: white;
+            background-color: white;
             padding: 20px;
             border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
 
         article {
@@ -61,7 +71,7 @@
         }
 
         article:last-child {
-            border: none;
+            border-bottom: none;
         }
 
         article h2 {
@@ -75,11 +85,43 @@
             margin-bottom: 10px;
         }
 
+        article a {
+            color: #3b5998;
+            font-weight: bold;
+        }
+
+        .acoes {
+            margin-top: 15px;
+        }
+
+        .acoes button {
+            border: none;
+            background-color: #f0f2f5;
+            padding: 8px 12px;
+            margin-right: 8px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 15px;
+        }
+
+        .acoes button:hover {
+            background-color: #dfe3e8;
+        }
+
         aside {
-            background: #e9ebee;
+            background-color: #e9ebee;
             padding: 20px;
             border-radius: 8px;
             height: fit-content;
+        }
+
+        aside h3 {
+            color: #2d4373;
+        }
+
+        aside a {
+            color: #3b5998;
+            font-weight: bold;
         }
 
         footer {
@@ -88,6 +130,18 @@
             text-align: center;
             padding: 15px;
             margin-top: 40px;
+        }
+
+        /* Responsividade para celulares */
+        @media (max-width: 700px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+
+            nav a {
+                display: block;
+                margin: 10px 0;
+            }
         }
     </style>
 </head>
@@ -118,14 +172,22 @@
                 </div>
 
                 <p>
-                    Nossa equipe de robótica deu um show na etapa regional no último final de semana. Com o robô 'Faísca', os alunos conseguiram superar grandes desafios de programação e trouxeram o troféu para a escola!
+                    Nossa equipe de robótica deu um show na etapa regional
+                    no último final de semana. Com o robô "Faísca", os alunos
+                    conseguiram superar grandes desafios de programação e
+                    trouxeram o troféu para a escola!
                 </p>
 
                 <a href="#">Leia mais...</a>
 
-                <div>
-                    <button>❤️ <span>0</span></button>
-                    <button>👍 <span>0</span></button>
+                <div class="acoes">
+                    <button onclick="curtir(this)">
+                        ❤️ <span>0</span>
+                    </button>
+
+                    <button onclick="curtir(this)">
+                        👍 <span>0</span>
+                    </button>
                 </div>
             </article>
 
@@ -138,14 +200,22 @@
                 </div>
 
                 <p>
-                    Estão abertas as inscrições para a nossa tradicional Feira de Ciências. O tema central deste ano será "Sustentabilidade e Tecnologia no Dia a Dia". Reúna seu grupo e envie seu projeto até o final do mês.
+                    Estão abertas as inscrições para a nossa tradicional Feira
+                    de Ciências. O tema central deste ano será
+                    "Sustentabilidade e Tecnologia no Dia a Dia".
+                    Reúna seu grupo e envie seu projeto até o final do mês.
                 </p>
 
                 <a href="#">Leia mais...</a>
 
-                <div>
-                    <button>❤️ <span>0</span></button>
-                    <button>👍 <span>0</span></button>
+                <div class="acoes">
+                    <button onclick="curtir(this)">
+                        ❤️ <span>0</span>
+                    </button>
+
+                    <button onclick="curtir(this)">
+                        👍 <span>0</span>
+                    </button>
                 </div>
             </article>
 
@@ -153,6 +223,7 @@
 
 
         <aside>
+
             <h3>Avisos Rápidos</h3>
 
             <ul>
@@ -169,17 +240,38 @@
 
             <h3>Links Úteis</h3>
 
-            <p><a href="#">Portal do Aluno</a></p>
-            <p><a href="#">Calendário Escolar</a></p>
+            <p>
+                <a href="#">Portal do Aluno</a>
+            </p>
+
+            <p>
+                <a href="#">Calendário Escolar</a>
+            </p>
+
         </aside>
 
     </div>
 
 
     <footer>
-        <p>&copy; 2026 Blog da Escola Conectar. Todos os direitos reservados.</p>
+        <p>
+            &copy; 2026 Blog da Escola Conectar.
+            Todos os direitos reservados.
+        </p>
     </footer>
 
+
+    <script>
+        function curtir(botao) {
+            const contador = botao.querySelector("span");
+            let numero = parseInt(contador.textContent);
+
+            numero++;
+
+            contador.textContent = numero;
+        }
+    </script>
+
 </body>
-</html>          
-                
+
+</html>
