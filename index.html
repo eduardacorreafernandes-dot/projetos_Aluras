@@ -7,143 +7,7 @@
 
     <title>Blog da Escola Conectar</title>
 
-    <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f6f9;
-            color: #333;
-        }
-
-        header {
-            background-color: #3b5998;
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
-
-        header h1 {
-            margin: 0 0 10px;
-        }
-
-        header p {
-            margin: 0;
-        }
-
-        nav {
-            background-color: #2d4373;
-            padding: 10px;
-            text-align: center;
-        }
-
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin: 0 15px;
-            font-weight: bold;
-        }
-
-        nav a:hover {
-            text-decoration: underline;
-        }
-
-        .container {
-            max-width: 1000px;
-            margin: 20px auto;
-            padding: 0 20px;
-            display: grid;
-            grid-template-columns: 3fr 1fr;
-            gap: 20px;
-        }
-
-        main {
-            background-color: white;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
-
-        article {
-            margin-bottom: 30px;
-            border-bottom: 2px solid #eee;
-            padding-bottom: 20px;
-        }
-
-        article:last-child {
-            border-bottom: none;
-        }
-
-        article h2 {
-            color: #3b5998;
-            margin-top: 0;
-        }
-
-        .meta {
-            font-size: 0.9em;
-            color: #777;
-            margin-bottom: 10px;
-        }
-
-        article a {
-            color: #3b5998;
-            font-weight: bold;
-        }
-
-        .acoes {
-            margin-top: 15px;
-        }
-
-        .acoes button {
-            border: none;
-            background-color: #f0f2f5;
-            padding: 8px 12px;
-            margin-right: 8px;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 15px;
-        }
-
-        .acoes button:hover {
-            background-color: #dfe3e8;
-        }
-
-        aside {
-            background-color: #e9ebee;
-            padding: 20px;
-            border-radius: 8px;
-            height: fit-content;
-        }
-
-        aside h3 {
-            color: #2d4373;
-        }
-
-        aside a {
-            color: #3b5998;
-            font-weight: bold;
-        }
-
-        footer {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 15px;
-            margin-top: 40px;
-        }
-
-        /* Responsividade para celulares */
-        @media (max-width: 700px) {
-            .container {
-                grid-template-columns: 1fr;
-            }
-
-            nav a {
-                display: block;
-                margin: 10px 0;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -168,14 +32,25 @@
                 <h2>Campeonato de Robótica: Conquistamos o 2º Lugar!</h2>
 
                 <div class="meta">
-                    Postado em 24 de Junho de 2026 por Lucas Silva (3º Ano)
+                    Postado em 24 de Junho de 2026 por
+                    <a href="https://www.google.com/" target="_blank" rel="noopener noreferrer">
+                        Lucas Silva
+                    </a>
+                    (3º Ano)
                 </div>
 
                 <p>
                     Nossa equipe de robótica deu um show na etapa regional
-                    no último final de semana. Com o robô "Faísca", os alunos
-                    conseguiram superar grandes desafios de programação e
-                    trouxeram o troféu para a escola!
+                    no último final de semana. Com o robô <strong>"Faísca"</strong>,
+                    os alunos conseguiram superar grandes desafios de programação
+                    e trouxeram o troféu para a escola!
+                </p>
+
+                <p class="artigo-fonte">
+                    Fonte:
+                    <a href="https://www.google.com/" target="_blank" rel="noopener noreferrer">
+                        Portal de Tecnologia
+                    </a>
                 </p>
 
                 <a href="#">Leia mais...</a>
@@ -202,8 +77,68 @@
                 <p>
                     Estão abertas as inscrições para a nossa tradicional Feira
                     de Ciências. O tema central deste ano será
-                    "Sustentabilidade e Tecnologia no Dia a Dia".
+                    <strong>"Sustentabilidade e Tecnologia no Dia a Dia"</strong>.<br><br>
+
                     Reúna seu grupo e envie seu projeto até o final do mês.
+                </p>
+
+                <p class="artigo-fonte">
+                    Fonte:
+                    <a href="https://www.google.com/" target="_blank" rel="noopener noreferrer">
+                        Escola Conectar
+                    </a>
+                </p>
+
+                <a href="#">Leia mais...</a>
+
+                <div class="acoes">
+                    <button onclick="curtir(this)">
+                        ❤️ <span>0</span>
+                    </button>
+
+                    <button onclick="curtir(this)">
+                        👍 <span>0</span>
+                    </button>
+                </div>
+            </article>
+
+
+            <article>
+                <h2>Como a Inteligência Artificial está mudando a tecnologia</h2>
+
+                <div class="meta">
+                    Postado em 20 de Agosto de 2026 por Equipe Escolar
+                </div>
+
+                <a
+                    href="https://images.unsplash.com/photo-1518770660439-4636190af475"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="imagem-link"
+                >
+                    <img
+                        src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=800"
+                        alt="Componentes eletrônicos utilizados em tecnologias digitais"
+                    >
+                </a>
+
+                <p>
+                    A <strong>Inteligência Artificial</strong> está cada vez mais
+                    presente no nosso cotidiano.<br><br>
+
+                    Ela permite que computadores analisem informações,
+                    reconheçam padrões e realizem diversas tarefas de maneira automatizada.
+                </p>
+
+                <p class="artigo-fonte">
+                    Fonte:
+                    <a
+                        href="https://www.ibm.com/topics/artificial-intelligence"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        IBM
+                    </a>
                 </p>
 
                 <a href="#">Leia mais...</a>
@@ -252,6 +187,14 @@
 
     </div>
 
+    <button
+        id="botao-tema"
+        class="btn-tema-escuro"
+        aria-label="Alternar tema"
+        title="Alternar tema"
+    >
+        🌙
+    </button>
 
     <footer>
         <p>
@@ -260,17 +203,7 @@
         </p>
     </footer>
 
-
-    <script>
-        function curtir(botao) {
-            const contador = botao.querySelector("span");
-            let numero = parseInt(contador.textContent);
-
-            numero++;
-
-            contador.textContent = numero;
-        }
-    </script>
+    <script src="main.js"></script>
 
 </body>
 
