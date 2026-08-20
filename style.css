@@ -1,0 +1,302 @@
+:root {
+    --cor-primaria: #3b5998;
+    --cor-secundaria: #2d4373;
+
+    --cor-fundo: #f4f6f9;
+    --cor-card: #ffffff;
+
+    --cor-texto: #333333;
+    --cor-texto-secundario: #777777;
+
+    --cor-destaque: #ff8c42;
+
+    --fonte-texto: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.tema-escuro {
+    --cor-primaria: #111827;
+    --cor-secundaria: #60a5fa;
+
+    --cor-fundo: #0f172a;
+    --cor-card: #1e293b;
+
+    --cor-texto: #f8fafc;
+    --cor-texto-secundario: #cbd5e1;
+
+    --cor-destaque: #facc15;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease,
+        transform 0.3s ease;
+}
+
+body {
+    font-family: var(--fonte-texto);
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    line-height: 1.6;
+}
+
+header {
+    background-color: var(--cor-primaria);
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin-bottom: 10px;
+}
+
+nav {
+    background-color: var(--cor-secundaria);
+    padding: 10px;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+.container {
+    width: 95%;
+    max-width: 1200px;
+    margin: 25px auto;
+
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+
+    gap: 25px;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+article {
+    display: flex;
+    flex-direction: column;
+
+    flex: 1 1 100%;
+
+    background-color: var(--cor-card);
+
+    padding: 22px;
+
+    border: 2px solid var(--cor-destaque);
+    border-radius: 10px;
+
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+article:hover {
+    transform: scale(1.02);
+
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+}
+
+article h2 {
+    color: var(--cor-primaria);
+    margin-bottom: 10px;
+}
+
+.meta {
+    font-size: 0.9rem;
+    color: var(--cor-texto-secundario);
+    margin-bottom: 15px;
+}
+
+article p {
+    margin-bottom: 12px;
+}
+
+article a {
+    color: var(--cor-primaria);
+    font-weight: bold;
+}
+
+.artigo-fonte {
+    font-size: 0.85rem;
+    font-style: italic;
+    color: var(--cor-texto-secundario);
+}
+
+.imagem-link {
+    display: block;
+    align-self: flex-start;
+
+    margin: 10px 0 18px;
+}
+
+.imagem-link img {
+    width: 100%;
+    max-width: 600px;
+
+    border-radius: 8px;
+
+    display: block;
+}
+
+.acoes {
+    margin-top: 15px;
+}
+
+.acoes button {
+    border: none;
+
+    background-color: #f0f2f5;
+
+    padding: 8px 12px;
+
+    margin-right: 8px;
+
+    border-radius: 5px;
+
+    cursor: pointer;
+
+    font-size: 15px;
+}
+
+.acoes button:hover {
+    background-color: #dfe3e8;
+    transform: scale(1.05);
+}
+
+aside {
+    background-color: var(--cor-card);
+
+    padding: 20px;
+
+    border-radius: 8px;
+
+    border: 1px solid var(--cor-destaque);
+
+    height: fit-content;
+
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+aside h3 {
+    color: var(--cor-secundaria);
+
+    margin-bottom: 10px;
+    margin-top: 15px;
+}
+
+aside h3:first-child {
+    margin-top: 0;
+}
+
+aside ul {
+    padding-left: 20px;
+}
+
+aside a {
+    color: var(--cor-primaria);
+    font-weight: bold;
+}
+
+.btn-tema-escuro {
+    position: fixed;
+
+    right: 25px;
+    bottom: 25px;
+
+    width: 55px;
+    height: 55px;
+
+    border: none;
+    border-radius: 50%;
+
+    background-color: var(--cor-primaria);
+    color: white;
+
+    font-size: 1.5rem;
+
+    cursor: pointer;
+
+    z-index: 1000;
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
+}
+
+.btn-tema-escuro:hover {
+    transform: scale(1.08);
+
+    background-color: var(--cor-secundaria);
+}
+
+.tema-escuro .btn-tema-escuro {
+    background-color: var(--cor-secundaria);
+    color: #111827;
+}
+
+.tema-escuro article h2,
+.tema-escuro aside h3 {
+    color: var(--cor-texto);
+}
+
+.tema-escuro article {
+    box-shadow: 0 2px 8px rgba(96, 165, 250, 0.3);
+}
+
+.tema-escuro article:hover {
+    box-shadow: 0 7px 18px rgba(96, 165, 250, 0.55);
+}
+
+.tema-escuro .acoes button {
+    background-color: #334155;
+    color: white;
+}
+
+footer {
+    background-color: #333333;
+    color: white;
+
+    text-align: center;
+
+    padding: 15px;
+
+    margin-top: 40px;
+}
+
+@media (max-width: 700px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+
+    nav a {
+        display: block;
+        margin: 10px 0;
+    }
+
+    article {
+        flex-direction: column;
+    }
+
+    .btn-tema-escuro {
+        right: 15px;
+        bottom: 15px;
+
+        width: 50px;
+        height: 50px;
+    }
+}
